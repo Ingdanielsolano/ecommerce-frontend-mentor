@@ -1,0 +1,36 @@
+.public-layout {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  &__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--spacing-small);
+    height: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &--left {
+      justify-content: flex-start;
+      align-items: center;
+      span {
+        margin-right: 5%;
+      }
+      .logo {
+        margin-top: -5px;
+      }
+    }
+
+    &--rigth {
+      justify-content: flex-end;
+    }
+  }
+}
