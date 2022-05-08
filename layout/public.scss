@@ -9,28 +9,30 @@
     flex-direction: row;
     justify-content: space-between;
     padding: var(--spacing-small);
-    height: 60px;
+    height: 44px;
   }
 
   &__wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 
     &--left {
-      justify-content: flex-start;
+      width: 50vw;
+      justify-content: space-around;
       align-items: center;
       span {
         margin-right: 5%;
       }
       .logo {
+        padding-left: 0px;
         margin-top: -5px;
       }
     }
 
     &--rigth {
-      justify-content: flex-end;
+      width: 24vw;
+      justify-content: space-around;
     }
   }
 }

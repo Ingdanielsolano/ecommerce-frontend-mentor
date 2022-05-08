@@ -9,25 +9,17 @@ const PublicLayout = ({ children }) => (
   <div className="public-layout">
     <nav className="public-layout__navbar">
       <div className="public-layout__wrapper public-layout__wrapper--left">
-        <Image src={MenuIconSvg} width="20" height="20" alt="Menu" />
-        <Image
-          className="logo"
-          src={LogoSvg}
-          width="146"
-          height="29"
-          style={{
-            marginTop: "-3px",
-          }}
-          alt="Logo"
-        />
+        <div>
+          <Image src={MenuIconSvg} width="20" height="16" alt="Menu" />
+        </div>
+        <div className="logo">
+          <Image src={LogoSvg} width="146" height="24" alt="Logo" />
+        </div>
       </div>
       <div className="public-layout__wrapper public-layout__wrapper--rigth">
-        <Image src={CartIconSvg} width="20" height="20" alt="Logo" />
-        <Image src={AvatarPng} width="20" height="20" alt="Logo" />
+        <Image src={CartIconSvg} width="24" height="24" alt="Logo" />
+        <Image src={AvatarPng} width="27" height="27" alt="Logo" />
       </div>
-      {/* <img /> */}
-      {/* <img /> */}
-      {/* <img /> */}
     </nav>
     <main>{children}</main>
   </div>
