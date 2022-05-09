@@ -95,4 +95,26 @@
       visibility: initial;
     }
   }
+
+  &__cart {
+    position: fixed;
+    height: 20vh;
+    width: 90vw;
+    background-color: var(--colors-white);
+    margin-top: 90px;
+    margin-left: 5vw;
+    border-radius: 10px;
+
+    &-header {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      border-bottom: 0.1px solid var(--colors-gray);
+      p {
+        margin-left: 20px;
+        font-size: var(--font-large);
+      }
+    }
+  }
 }
