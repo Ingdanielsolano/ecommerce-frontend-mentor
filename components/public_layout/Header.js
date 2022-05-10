@@ -1,7 +1,7 @@
-import CartIconSvg from "@public/icons/icon-cart.svg";
-import MenuIconSvg from "@public/icons/icon-menu.svg";
-import AvatarPng from "@public/images/image-avatar.png";
-import LogoSvg from "@public/images/logo.svg";
+import CartIconSvg from "public/icons/icon-cart.svg";
+import MenuIconSvg from "public/icons/icon-menu.svg";
+import AvatarPng from "public/images/image-avatar.png";
+import LogoSvg from "public/images/logo.svg";
 import Image from "next/image";
 import propTypes from "prop-types";
 

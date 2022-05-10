@@ -1,4 +1,4 @@
-import CloseIconSvg from "@public/icons/icon-close.svg";
+import CloseIconSvg from "public/icons/icon-close.svg";
 import Image from "next/image";
 import Link from "next/link";
 import propTypes from "prop-types";
@@ -8,6 +8,7 @@ const Sidebar = ({ openSidebar, setOpenSidebar }) => (
     className={`public-layout__sidenav-wrapper public-layout__sidenav-wrapper${
       openSidebar ? "--open" : "--closed"
     }`}
+    data-testid="sidebar"
   >
     <div
       className={`public-layout__sidenav public-layout__sidenav${
