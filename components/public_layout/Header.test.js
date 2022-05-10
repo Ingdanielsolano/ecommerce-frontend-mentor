@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom/extend-expect";
-import { render } from "@testing-library/react";
+import { fireEvent, prettyDOM, render, screen } from "@testing-library/react";
 import Header from "./Header";
 
 test("it render", () => {
@@ -9,7 +9,7 @@ test("it render", () => {
 
   const setIsCartOpen = () => (isCartOpen = !isCartOpen);
 
-  const view = render(
+  render(
     <Header
       isCartOpen={isCartOpen}
       setIsCartOpen={setIsCartOpen}
@@ -17,5 +17,31 @@ test("it render", () => {
       setOpenSidebar={setOpenSidebar}
     />
   );
-  console.log(view);
+
+  screen.getByAltText("Menu");
+  screen.queryByAltText("Menu");
+});
+
+test("click to open sidebar", () => {
+  let openSidebar = false;
+  let isCartOpen = false;
+  const setOpenSidebar = () => (openSidebar = !openSidebar);
+
+  const setIsCartOpen = () => (isCartOpen = !isCartOpen);
+
+  const mockHandler = jest.fn();
+
+  render(
+    <Header
+      isCartOpen={isCartOpen}
+      setIsCartOpen={setIsCartOpen}
+      openSidebar={openSidebar}
+      setOpenSidebar={mockHandler}
+    />
+  );
+
+  screen.getByAltText("Menu");
+  const image = screen.queryByAltText("Menu");
+  fireEvent.click(image);
+  expect(mockHandler).toHaveBeenCalledTimes(1);
 });
