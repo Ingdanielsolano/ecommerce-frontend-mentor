@@ -6,12 +6,12 @@ module.exports = {
     es6: true,
   },
   extends: [
-    "eslint:recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "next",
     "next/core-web-vitals",
   ],
+  plugins: ["testing-library"],
   rules: {
     semi: ["error", "always"],
     "linebreak-style": 0,
@@ -22,4 +22,10 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react"],
+    },
+  ],
 };
