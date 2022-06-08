@@ -1,6 +1,5 @@
 import "@testing-library/jest-dom/extend-expect";
-import { fireEvent, prettyDOM, render, screen } from "@testing-library/react";
-import { Component } from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import PublicLayout from "./public";
 
 describe("<PublicLayout/>", () => {
@@ -9,7 +8,7 @@ describe("<PublicLayout/>", () => {
     screen.getByText("Testing");
   });
 
-  test("renders", () => {
+  test("Open and close menu", () => {
     render(<PublicLayout>Testing</PublicLayout>);
     const element = screen.getByTestId("sidebar");
     expect(element.className).toContain("closed");
